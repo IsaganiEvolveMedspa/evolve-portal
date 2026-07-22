@@ -1,0 +1,430 @@
+/* Evolve Med Spa — Internal Employee Portal
+   Recreated from Claude Design source (Evolve Home.dc.html) */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #2E2E2E;
+  background: #F6F6F6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; }
+::placeholder { color: #a9a8a5; }
+
+@keyframes evRise {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E8E7E4;
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  background: #2E2E2E;
+  color: #F6F6F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.logo-text {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #2E2E2E;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-wrap {
+  position: relative;
+  width: 340px;
+  max-width: 42vw;
+}
+
+.search-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a9a8a5;
+  display: flex;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px 0 38px;
+  border: 1px solid #E8E7E4;
+  background: #F6F6F6;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: .3px;
+  color: #2E2E2E;
+  outline: none;
+  transition: border-color .18s ease, background .18s ease;
+}
+.search-input:focus {
+  border-color: #2E2E2E;
+  background: #FFFFFF;
+}
+
+.help-link {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #2E2E2E;
+}
+
+/* ---------- Main / layout ---------- */
+.main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px 0;
+}
+
+/* ---------- Hero ---------- */
+.hero-section {
+  display: flex;
+  gap: 44px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 52px 0 8px;
+}
+
+.hero-left {
+  flex: 1 1 520px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  background: #A37B88;
+  display: inline-block;
+}
+
+.eyebrow-text {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2E2E2E;
+}
+
+.eyebrow-date {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #a9a8a5;
+  margin-left: 6px;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  line-height: 1.02;
+  margin: 0;
+}
+
+.hero-sub {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #6b6967;
+  margin: 18px 0 0;
+  max-width: 500px;
+}
+
+/* ---------- What's New panel ---------- */
+.whatsnew {
+  flex: 1 1 320px;
+  min-width: 290px;
+  background: #FFFFFF;
+  border: 1px solid #E8E7E4;
+  padding: 30px 30px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatsnew-title {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2E2E2E;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #E8E7E4;
+  margin-bottom: 20px;
+}
+
+.update-item {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+.update-item:last-of-type { margin-bottom: 24px; }
+
+.update-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #A37B88;
+  margin-bottom: 6px;
+}
+
+.update-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #2E2E2E;
+  line-height: 1.25;
+}
+
+.update-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: #6b6967;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.update-cta {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-block;
+  background: #2E2E2E;
+  color: #F6F6F6;
+  padding: 11px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .18s ease;
+}
+.update-cta:hover { background: #A37B88; }
+
+/* ---------- Sections / tile grid ---------- */
+.section { margin-top: 52px; }
+.section:first-of-type { margin-top: 60px; }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 1px solid #E8E7E4;
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+}
+
+.section-num {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #A37B88;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2E2E2E;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: 16px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  min-height: 120px;
+  background: #FFFFFF;
+  border: 1px solid #E8E7E4;
+  text-decoration: none;
+  color: #2E2E2E;
+  transition: border-color .18s ease;
+}
+.tile:hover { border-color: #2E2E2E; }
+
+.tile-icon { color: #2E2E2E; display: flex; }
+
+.tile-text { display: flex; flex-direction: column; gap: 5px; }
+
+.tile-title { font-size: 15.5px; font-weight: 700; letter-spacing: .3px; }
+
+.tile-desc {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: #8a8a87;
+  line-height: 1.35;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 76px;
+  border-top: 1px solid #E8E7E4;
+  padding: 34px 0 56px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 56px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.footer-brand-mark {
+  width: 30px;
+  height: 30px;
+  background: #2E2E2E;
+  color: #F6F6F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.footer-brand-text {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #2E2E2E;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 40px;
+}
+
+.footer-link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-link-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a9a8a5;
+}
+
+.footer-link-value {
+  font-size: 13.5px;
+  font-weight: 300;
+  color: #2E2E2E;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #E8E7E4;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #a9a8a5;
+}
+
+/* ---------- Placeholder pages ---------- */
+.placeholder-main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 90px 40px 120px;
+  text-align: center;
+}
+.placeholder-main h1 {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  margin: 0 0 12px;
+}
+.placeholder-main p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #6b6967;
+  max-width: 480px;
+  margin: 0 auto 28px;
+}
+.placeholder-back {
+  display: inline-block;
+  background: #2E2E2E;
+  color: #F6F6F6;
+  padding: 11px 22px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .18s ease;
+}
+.placeholder-back:hover { background: #A37B88; }
